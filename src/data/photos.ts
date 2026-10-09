@@ -143,9 +143,9 @@ export const photos: Photo[] = [
 ];
 
 export function thumbSrc(id: string) {
-  return `/gallery/t/${id}.jpg`;
+  return `${import.meta.env.BASE_URL}gallery/t/${id}.jpg`;
 }
 
 export function fullSrc(id: string) {
-  return `/gallery/f/${id}.jpg`;
+  return `${import.meta.env.BASE_URL}gallery/f/${id}.jpg`;
 }
