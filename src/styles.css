@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f4f4f2;
+  --color-ink: #111111;
+  --color-mute: #5c5c5c;
+  --font-sans: "Heebo", "Arial Hebrew", "Noto Sans Hebrew", sans-serif;
+  --font-display: "Frank Ruhl Libre", "David Libre", "Times New Roman", serif;
+  --shadow-float: 0 28px 70px rgb(0 0 0 / 0.42);
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    color-scheme: light;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100%;
+    background: var(--color-paper);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--color-ink);
+    color: var(--color-paper);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 3px;
+  }
+}
+
+.kicker {
+  letter-spacing: 0.28em;
+}
+
+.latin-mark {
+  letter-spacing: 0.42em;
+}
+
+.masonry {
+  columns: 2;
+  column-gap: 0.75rem;
+}
+
+.masonry > * {
+  break-inside: avoid;
+  margin-bottom: 0.75rem;
+}
+
+.no-save,
+.no-save img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.no-save img {
+  pointer-events: none;
+}
+
+.lift {
+  animation: lift 280ms cubic-bezier(0.2, 0, 0, 1) both;
+}
+
+.scrim-in {
+  animation: scrim-in 220ms ease-out both;
+}
+
+.photo-in {
+  animation: photo-in 180ms ease-out both;
+}
+
+@keyframes lift {
+  from {
+    opacity: 0;
+    transform: scale(var(--lift-from, 0.667));
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scrim-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes photo-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 48rem) {
+  .masonry {
+    columns: 3;
+    column-gap: 1rem;
+  }
+
+  .masonry > * {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lift,
+  .scrim-in,
+  .photo-in {
+    animation: none;
+  }
+}

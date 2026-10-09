@@ -1,0 +1,41 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "ורושה VAROSHA — עיירת הרפאים שננטשה",
+      "hasCanvas": false,
+      "bodyTextLen": 168,
+      "bodyTextHash": "0e0f759246438c160d14a73938645bb2b526df97f36bcda0152cacc8e4517713",
+      "bodyTextPrefix": "פמגוסטה · 1974 ורושה VAROSHA עיירת הרפאים שננטשה רובע הנופש של פ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "ורושה VAROSHA — עיירת הרפאים שננטשה",
+      "hasCanvas": false,
+      "bodyTextLen": 168,
+      "bodyTextHash": "0e0f759246438c160d14a73938645bb2b526df97f36bcda0152cacc8e4517713",
+      "bodyTextPrefix": "פמגוסטה · 1974 ורושה VAROSHA עיירת הרפאים שננטשה רובע הנופש של פ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": true,
+  "baselineReasons": [
+    "desktop: body text changed (137 -> 168 chars, hash mismatch)",
+    "mobile: body text changed (137 -> 168 chars, hash mismatch)"
+  ]
+}
